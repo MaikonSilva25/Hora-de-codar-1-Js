@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inicio() {
+
+            var frutas = ["Laranja", "Banana", "Uva", "Abacaxi", "Goiaba", "Manga", "Maçã", "Pera", "Limão", "Caju", "Melão", "Melancia"];
+
+            while (frutas.length > 0) {
+                var escolha = prompt("Escolha uma fruta da lista: " + frutas);
+
+                if (frutas.includes(escolha)) {
+                    frutas.splice(frutas.indexOf(escolha), 1);
+                    alert("Fruta " + escolha + " foi removida da lista.");
+                }
+                else {
+                    alert("Fruta indisponível no nosso mercado.");
+
+                }
+            }
+
+            alert("Lista de compras finalizada.");
+
+        }
+    </script>
+</body>
+</html>

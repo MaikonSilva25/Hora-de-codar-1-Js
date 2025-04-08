@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inicio() {
+
+        var n1 = parseFloat(prompt("Escreva o primeiro número da operação: "));
+
+        var tipo = parseInt(prompt("Escolha o número da operação que deseja fazer: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação"));
+
+        while (tipo < 1 || tipo > 4) {
+        tipo = parseInt(prompt("Escolha o número da operação entre: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação "))
+        }
+
+        var n2 = parseFloat(prompt("Escreva o segundo número da operação: "));
+
+        if (tipo == 1) {
+        document.write("O resultado é: " + (n1 + n2))
+        }
+        else if (tipo == 2) {
+        document.write("O resultado é: "+ (n1 - n2))
+        }
+        else if(tipo == 3){
+        document.write("O resultado é: "+ (n1 / n2))
+        }
+        else{
+        document.write("O resultado é: "+ (n1 * n2))
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inicio() {
+
+        var mat, port, fis, geo, h, bi, soma
+
+        mat = parseInt(prompt("coloque sua nota em Matemática: "))
+        while (mat < 0 || mat > 10) {
+            mat = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+        }
+
+
+        port = parseInt(prompt("coloque sua nota em Português: "))
+        while (port < 0 || port > 10) {
+            port = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+        }
+
+        fis = parseInt(prompt("coloque sua nota em Física: "))
+        while (fis < 0 || fis > 10) {
+            fis = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+        }
+
+        geo = parseInt(prompt("coloque sua nota em Geografia: "))
+        while (geo < 0 || geo > 10) {
+            geo = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+        }
+
+
+        hist = parseInt(prompt("coloque sua nota em História: "))
+        while (hist < 0 || hist > 10) {
+            hist = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+        }
+
+        bio = parseInt(prompt("coloque sua nota em Biologia: "))
+        while (bio < 0 || bio > 10) {
+            bio = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+        }
+
+        soma = (mat + port + fis + geo + hist + bio) / 6
+
+        document.write("Sua média é: " + soma + "<br>")
+
+        if (soma >= 6) {
+            document.write("Parabéns você passou!!!!")
+        }
+
+        else {
+            document.write("É parceiro não foi dessa vez.")
+        }
+    }
+    </script>
+</body>
+</html>

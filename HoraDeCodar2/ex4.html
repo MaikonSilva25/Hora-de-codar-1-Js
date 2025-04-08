@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var n1 = parseInt(prompt("Digite primeiro numero: "))
+        var n2 = parseInt(prompt("Digite segundo numero: "))
+        var n3 = parseInt(prompt("Digite terceiro numero: "))
+        var soma 
+
+        if(n1 ==  n2 && n1 == n3 && n2 == n3){
+            alert("informe numero diferentes")
+        }else if(n1 > n2 && n1 > n3){
+        
+            if(n2 > n3){
+                soma = n1 + n2
+                alert("resultado:" + soma)
+            }else {
+              soma = n1 + n3
+                alert("resultado:" + soma)
+            }
+        }
+        if(n2 == n1 && n2 == n3 && n1 == n3){
+            alert("informe numero diferentes")   
+        }else if(n2 > n1 && n2 > n3){
+            
+            if(n1 > n3){
+                soma = n2 + n1
+                alert("Resultado: " + soma)
+            }else{
+                soma = n2 + n3
+                alert("resultado: " + soma)
+            }    
+        } if(n3 ==  n1 && n3 == n2 && n1 == n2){
+            alert("informe numero diferentes")
+        }else if(n3 > n2 && n3 > n1){
+
+            if(n1 > n2){
+                soma = n3 + n1
+                alert("resultado:" + soma)
+            }else {
+                soma = n3 + n2
+                alert("resultado:" + soma)
+            }
+        }
+        // else if(n2 > n1 >= n3){
+        //    resultado = n2 + n1 || n2 + n3
+        //    alert("Resultado: " + resultado)
+        // }else if(n3 > n1 >= n3){
+        //   resultado =  n3 + n1 || n3 + n2
+        //   alert("Resultado: " + resultado)
+        // }
+
+    </script>
+
+</body>
+</html>

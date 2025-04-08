@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inicio() {
+
+            var estudantes = []
+            var nome = prompt("Digite o nome do estudante: ")
+            var v = 0
+            while (nome != "Pare") {
+                estudantes.push(nome)
+                nome = prompt("Digite o nome do estudante, caso queira parar digite 'Pare': ")
+                v++
+            }
+            alert("Quantidade de estudantes cadastrados: " + v)
+            document.write("Lista de estudantes cadastrados: <br>" + estudantes)
+
+        }
+    </script>
+</body>
+</html>
