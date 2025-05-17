@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <script>
+      var saldo = 100.5; //Float
+      var nome = prompt("Digite seu nome:");
+      alert("Olá " + nome + " , é um prazer ter você por aqui!");
+      let senha = 3589;
+      function inicio() {
+        let senha = 3589;
+        var escolha = parseInt(
+          prompt(
+            "Selecione uma opção 1.) Saldo 2.) Extrato  3.) Saque 4.) Depósito 5.) Transferencia 6.) Sair"
+          )
+        );
+
+        if (escolha === 1) {
+          ver_saldo();
+        } else if (escolha === 2) {
+          fazer_deposito();
+        } else if (escolha === 3) {
+          fazer_saque();
+        } else if (escolha === 4) {
+          ver_extrato();
+        } else if (escolha === 5) {
+          transferencia();
+        } else if (escolha === 6) {
+          sair();
+        } else {
+          erro();
+        }
+      }
+
+      function ver_saldo() {
+        solicitarSenha();
+        alert("Seu saldo atual é: " + saldo);
+        inicio();
+      }
+
+      function fazer_deposito() {
+        solicitarSenha();
+        var deposito = parseFloat(prompt("Qual o valor para depósito?"));
+        // Not a Number
+        if (isNaN(deposito) || deposito === "") {
+          alert("Por favor, informe um número:");
+          fazer_deposito();
+        } else {
+          saldo += deposito;
+          ver_saldo();
+        }
+      }
+
+      function fazer_saque() {
+        solicitarSenha();
+        var saque = parseFloat(prompt("Qual o valor para saque?"));
+        if (isNaN(saque) || saque === "") {
+          alert("Por favor, informe um número:");
+          fazer_saque();
+        } else if (saque > saldo || saque <= 0) {
+          alert("Saque não autorizada");
+          fazer_saque();
+        } else {
+          saldo -= saque;
+
+          ver_saldo();
+        }
+      }
+      function ver_extrato() {
+        solicitarSenha();
+        alert(
+          "Pix transf Maikon \n R$-2.000 \n Paganento Aporvado CaiCard \n R$ - 85,50 \n Deposito Recebido David \n R$ 26,00"
+        );
+      }
+      function transferencia() {
+        solicitarSenha();
+        let numeroAgencia = parseInt(prompt("Digite o número da agência: "));
+        if (
+          isNaN(numeroAgencia) ||
+          numeroAgencia === "" ||
+          numeroAgencia <= 0
+        ) {
+          alert("Numero não é valido");
+          transferencia();
+        } else {
+          alert("Numero de Agência Correto " + numeroAgencia);
+        }
+        let valorTransf = parseFloat(prompt("Digite o valor:"));
+        if (valorTransf > saldo || valorTransf <= 0) {
+          alert("Valor negado!");
+          transferencia();
+        } else {
+          alert(
+            "O valor de " +
+              valorTrasf +
+              " foi transferido com sucesso para a conta " +
+              numeroAgencia
+          );
+
+          saldo = saldo - valorTrasferencia;
+        }
+      }
+      function solicitarSenha() {
+        let sen = parseInt(prompt("Digite sua senha: "));
+        if (sen != senha) {
+          alert("Senha incorreta!");
+          solicitarSenha();
+        } else {
+          alert("Senha Correta!");
+        }
+      }
+
+      function erro() {
+        alert("Por favor, informe um número entre 1 e 6");
+        inicio();
+      }
+
+      function sair() {
+        var confirma = confirm("Você deseja sair?");
+        if (confirma) {
+          alert(nome + ", foi um prazer ter você por aqui!");
+
+          window.close();
+        } else {
+          inicio();
+        }
+      }
+      function nome_U() {
+        alert(nome + ", foi um prazer ter você por aqui!");
+      }
+
+      inicio();
+    </script>
+  </head>
+
+  <body></body>
+</html>
